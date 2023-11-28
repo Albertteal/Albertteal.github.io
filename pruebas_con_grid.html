@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display: grid;
+            width: 400px;
+            height: 400px;
+            background: rgb(255, 0, 106);
+            grid-template-columns: 1fr 1fr 1fr 1fr;  /* Nos indica que sea una porcion de todo lo que tenemos, dependiendod
+            de la cantidad de porciones*/
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .item {
+            background: green;
+        }
+        .contenedor .item:nth-child(1){
+             grid-column: 1 / 2 ;   /* le decimos que en la linea 1 y termina en la linea 2 */
+        }
+        .contenedor .item:nth-child(1){
+            grid-column: 2 / 3 ;
+            grid-row: 2 / 5;  /* le decimos que en la columna 2 y termina en la linea 5 */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">  <!-- Creamos los contenedores, son 4 -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
