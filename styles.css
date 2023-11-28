@@ -1,0 +1,22 @@
+.contenedor {
+    display: grid;
+    width: 3400px;
+    height: 500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .LogoEsime_imagen {
+    width: 250px;
+    height: 250px;
+    grid-column: 1;
+    justify-self: start;
+  }
+  
+  .LogoIPN_imagen {
+    width: 250px;
+    height: 250px;
+    grid-column: 2;
+    justify-self: end;
+  }
+  
