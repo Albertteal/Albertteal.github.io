@@ -38,10 +38,37 @@ p.TitulodeForm {
 
 .form input {
     width: 100%;
-    height: 30px;
+    height: 50px;
     margin: 0.5rem;
+    border: 2px solid black;
 }
 
 #botonIniciar {
+    font-size: 30px;
+    height: 70px;
+    width: 8%;
+    border: 3px solid #c00767;
     margin-top: 0.5rem; /* Agrega un margen superior al botón para separarlo del campo de contraseña */
+}
+
+#BotonEscanear{
+    width: 300px;/*  Ancho */
+    height: 100px;
+}
+#BotonNuevoGrupo{
+    width: 300px;/*  Ancho */
+    height: 100px;
+}
+#BotonConsultar{
+    width: 300px;/*  Ancho */
+    height: 100px;
+    padding: 30px;
+}
+
+#ContenedordeBotones{
+    display: flex;
+    justify-content: center;  /* Para justificarlos en el centro del eje horizontal*/
+    align-items: center; /* Para justificarlos en el centro del eje vertical*/
+    padding: 300px;
+    flex-direction: column;
 }
