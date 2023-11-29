@@ -1,3 +1,19 @@
+#contenedordePantalla{
+    display: flex; /* Para justificarlos en el centro del eje horizontal*/
+    height: 243px;
+
+}
+.LogoEsime{
+margin-left: 0;
+height: 250px;
+width: 250px;
+}
+
+.LogoIPN{
+height: 250px;
+width: 250px;
+margin-left: 1410px ;
+}
 .cuerpodeLoggeo {
     display: flex;
     flex-direction: column;
