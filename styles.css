@@ -1,4 +1,4 @@
-.contenedor {
+#contenedordePantalla {
     display: grid;
     width: 3400px;
     height: 500px;
@@ -15,7 +15,7 @@
   
   .LogoIPN_imagen {
     width: 250px;
-    height: 250px;
+    height: 220px;
     grid-column: 2;
     justify-self:center;
   }
@@ -48,7 +48,7 @@ font-size: 50px;
     margin: 0.5rem;
   }
   
-  .form button {
+  #botonIniciar {
     color: #fff !important;
     font-size: 20px;
     font-weight: 500;
