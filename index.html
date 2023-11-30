@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppList</title>
+    <script src="./log.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div id="contenedordePantalla">  
+
+            <img src="./recursos/LogoEsime.png" class="LogoEsime" /> 
+
+            <img src="./recursos/logo-ipn.png" class="LogoIPN" />
+        </div>
+
+        <div class="cuerpodeLoggeo">
+
+        
+            <form class="form">
+                <p class="TitulodeForm">
+
+                    Bienvenido, ingrese la contraseña
+                </p>
+              <input type="password" required id="contrasena" />
+
+
+            </form>
+            <button class="button_slide slide_right" id="botonIniciar" onclick="verificarContrasena()">Iniciar</button>
+            <button class="button_slide slide_right" id="BotonRestablecer" onclick="PantallaRestablecerContrasena()"> Olvide contraseña </button>
+            
+          
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./log.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<div id="contenedordePantalla">  
+
+    <img src="./recursos/LogoEsime.png" class="LogoEsime" /> 
+
+    <img src="./recursos/logo-ipn.png" class="LogoIPN" />
+</div>
+
+<div class="cuerpodeLoggeo">
+
+
+    <form class="form">
+        <p class="TitulodeForm">
+
+            Ingrese la clave de restablecimiento
+        </p>
+      <input type="password" required id="contrasena_de_restablecimiento" />
+        <div id="letrasdeNuevaContrasena">
+            <p>
+                Ingrese nueva contraseña
+            </p>
+        </div>
+      <input type="password" required id="Nueva_Contrasena" />
+
+
+    </form>
+    <button class="button_slide slide_right"  id="BotonRestablecer" onclick="RestablecerContraseña()">Restablecer</button>
+
+</body>
+</html>
