@@ -77,3 +77,11 @@ p.TitulodeForm {
 
     flex-direction: column;
 }
+
+#BotonRestablecer{
+    margin-top: 8px;
+    font-size: 15px;
+    height: 20px;
+    width: 12%;
+}
+

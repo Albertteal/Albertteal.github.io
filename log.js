@@ -1,12 +1,9 @@
 function verificarContrasena() {
 
-    // Get the input field for password
+
     const contrasenaInput = document.getElementById('contrasena');
-  
-    // Get the entered password
     const enteredPassword = contrasenaInput.value;
   
-    // Check if the entered password matches the correct password
     if (enteredPassword === 'Valles') {
       alert('Contraseña correcta. Accediste');
       location.href = 'pantallaprincipal.html'; // Redirect to the main screen
@@ -15,3 +12,24 @@ function verificarContrasena() {
     }
   }
   
+  function PantallaRestablecerContrasena(){
+    location.href = 'restablecerContraseña.html';
+  }
+
+
+  function RestablecerContraseña{
+
+    const contrasenadeRestablecimiento = document.getElementById('contrasena_de_restablecimiento');
+    const contrasenaIntroducidaparaEstablecer = contrasenadeRestablecimiento.value;
+
+    if (contrasenaIntroducidaparaEstablecer === 'Q@23faalz_24412#') {
+        alert('Clave correcta. Contraseña reestablecida');
+        location.href = 'pantallaprincipal.html'; // Redirect to the main screen
+      } else {
+        alert('Contraseña incorrecta. Intente nuevamente.');
+      }
+  }
+
+
+
+
