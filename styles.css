@@ -1,6 +1,35 @@
+.button_slide {
+    color: #FFF;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    border-radius: 15px;
+  }
+  
+  
+  .slide_right:hover {
+    box-shadow: inset 400px 0 0 0 #D80286;
+  }
+  
+
+  #outer {
+    width: 364px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
+
 #contenedordePantalla{
     display: flex; /* Para justificarlos en el centro del eje horizontal*/
-    height: 243px;
+    height: 250px;
 
 }
 .LogoEsime{
@@ -12,9 +41,11 @@ width: 250px;
 .LogoIPN{
 height: 250px;
 width: 250px;
-margin-left: 1410px ;
+margin-left: 1412px ;
 }
 .cuerpodeLoggeo {
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,14 +75,7 @@ p.TitulodeForm {
     border-radius: 15px;
 }
 
-#botonIniciar {
-    font-size: 30px;
-    height: 70px;
-    width: 8%;
-    border: 3px solid #c00767;
-    border-radius: 15px;
-    margin-top: 0.5rem; /* Agrega un margen superior al botón para separarlo del campo de contraseña */
-}
+
 
 #BotonEscanear{
     width: 300px;/*  Ancho */
