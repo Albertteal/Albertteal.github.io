@@ -20,12 +20,16 @@
 
         
             <form class="form">
-                <p class="TitulodeForm">Bienvenido, ingrese la contraseña</p>
-              <input type="password" />
+                <p class="TitulodeForm">
+
+                    Bienvenido, ingrese la contraseña
+                </p>
+              <input type="password" required id="contrasena" />
 
 
             </form>
-            <button id="botonIniciar" onclick="location.href= 'pantallaprincipal.html' ">Iniciar</button>
+            <button id="botonIniciar" onclick="verificarContrasena()">Iniciar</button>
+
           
 
 </body>
