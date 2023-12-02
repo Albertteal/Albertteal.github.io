@@ -50,9 +50,6 @@ function ReestableciendoContrasena(){
   enteredPassword = NuevaContraParaEntrar;
   alert(enteredPassword)
   location.href = 'index.html'; 
-  
-  
- 
 }
 
 
