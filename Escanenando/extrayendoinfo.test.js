@@ -19,7 +19,8 @@ describe('Extrayendo informacion', () => {
         console.log(nombre)
         // const nombre = await page.waitForSelector('#wrapper > div.nombre')
         // const boleta = await page.waitForSelector('#wrapper > div.boleta')
-        console.log(nombre)
+        const boleta = await page.$eval('#wrapper > div.boleta', (div)=>div.textContent )
+        console.log(boleta)
         // console.log(boleta)
 
 		await browser.close()
