@@ -2,7 +2,7 @@ var enteredPassword;
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
-
+const extraerInformacion = require('./extrayendoinfo.test');
 function verificarContrasena() {
 
 
@@ -54,3 +54,18 @@ function ReestableciendoContrasena(){
   
  
 }
+
+function extraer_informacion(){
+  (async () => {
+  
+    const extraccion = await extraerInformacion();
+  
+    const boleta = extraccion.boleta;
+    const nombre = extraccion.nombre;
+    console.log('nombre:', nombre);
+    console.log('boleta:', boleta);
+    
+  })();
+  
+}
+extraer_informacion();
