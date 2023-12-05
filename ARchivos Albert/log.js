@@ -2,6 +2,9 @@ var enteredPassword;
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
+var boleta;
+var nombre;
+
 const extraerInformacion = require('./extrayendoinfo.test');
 function verificarContrasena() {
 
@@ -56,16 +59,27 @@ function ReestableciendoContrasena(){
 }
 
 function extraer_informacion(){
+
   (async () => {
   
     const extraccion = await extraerInformacion();
   
-    const boleta = extraccion.boleta;
-    const nombre = extraccion.nombre;
+    boleta = extraccion.boleta;
+    nombre = extraccion.nombre;
     console.log('nombre:', nombre);
     console.log('boleta:', boleta);
-    
+
   })();
-  
+
+}
+
+function BoletayNombreenPantalla(){
+    (async () => {
+    const fun = await extraer_informacion();
+
+    console.log('nombre v :', nombre);
+    console.log('boleta  v :', boleta);
+})();
 }
 extraer_informacion();
+BoletayNombreenPantalla();
