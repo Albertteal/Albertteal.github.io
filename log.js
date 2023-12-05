@@ -2,7 +2,7 @@ var enteredPassword
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
-
+const extraerInformacion = require('./extrayendoinfo.test');
 function verificarContrasena() {
 
 
@@ -55,10 +55,6 @@ function ReestableciendoContrasena(){
  
 }
 
-function RedirigeaPantalladeEscaneo(){
-    location.href = 'pantallaprincipal.html';
-
-}
 
 
 
