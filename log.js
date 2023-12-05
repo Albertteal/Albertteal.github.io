@@ -1,4 +1,4 @@
-var enteredPassword;
+var enteredPassword
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
@@ -38,7 +38,7 @@ function RestablecerContraseña(){
       ReestableciendoContrasena();
      
     } else {  
-      alert('Contraseña incorrecta. Intente nuevamente.');
+      alert('clave incorrecta. Intente nuevamente.');
     }
     
 }
@@ -55,6 +55,10 @@ function ReestableciendoContrasena(){
  
 }
 
+function RedirigeaPantalladeEscaneo(){
+    location.href = 'pantallaprincipal.html';
+
+}
 
 
 
