@@ -1,4 +1,4 @@
-var enteredPassword
+var enteredPassword;
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
@@ -38,7 +38,7 @@ function RestablecerContraseña(){
       ReestableciendoContrasena();
      
     } else {  
-      alert('clave incorrecta. Intente nuevamente.');
+      alert('Contraseña incorrecta. Intente nuevamente.');
     }
     
 }
@@ -55,6 +55,17 @@ function ReestableciendoContrasena(){
  
 }
 
-
-
-
+function extraer_informacion(){
+  (async () => {
+  
+    const extraccion = await extraerInformacion();
+  
+    const boleta = extraccion.boleta;
+    const nombre = extraccion.nombre;
+    console.log('nombre:', nombre);
+    console.log('boleta:', boleta);
+    
+  })();
+  
+}
+extraer_informacion();
