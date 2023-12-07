@@ -71,4 +71,7 @@ function SacarPantalla(boleta, nombre) {
   console.log('El nombre ya fuera de la funcion test es: ', nombre);
 }
 
+function AbrirEmergente(){
+  window.open("https://javascript.info/");
+}
 extraer_informacion();
