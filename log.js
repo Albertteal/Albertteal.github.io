@@ -2,6 +2,8 @@ var enteredPassword;
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
+var boleta;
+var nombre;
 const extraerInformacion = require('./extrayendoinfo.test');
 function verificarContrasena() {
 
@@ -55,17 +57,18 @@ function ReestableciendoContrasena(){
  
 }
 
-function extraer_informacion(){
-  (async () => {
-  
-    const extraccion = await extraerInformacion();
-  
-    const boleta = extraccion.boleta;
-    const nombre = extraccion.nombre;
-    console.log('nombre:', nombre);
-    console.log('boleta:', boleta);
-    
-  })();
-  
+async function extraer_informacion() {
+  const extraccion = await extraerInformacion();
+  boleta = extraccion.boleta;
+  nombre = extraccion.nombre;
+  console.log('La boleta desde el test: ', boleta);
+  console.log('El nombre desde el test: ', nombre);
+  SacarPantalla(boleta, nombre); // Llamar a SacarPantalla con los valores actualizados
 }
+
+function SacarPantalla(boleta, nombre) {
+  console.log('La boleta ya fuera de la funcion test es: ', boleta);
+  console.log('El nombre ya fuera de la funcion test es: ', nombre);
+}
+
 extraer_informacion();

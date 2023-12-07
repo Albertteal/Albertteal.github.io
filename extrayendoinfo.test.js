@@ -10,7 +10,7 @@ async function extraerInformacion() {
   });
 
   const page = await browser.newPage();
-  await page.goto('https://www.dae.ipn.mx/vcred/?h=e24d1d454ff2a75f71c29e72e0fd5fb275b5b5cdd521264d32dd541d1a3f', {
+  await page.goto('https://servicios.dae.ipn.mx/vcred/?h=5d7213f96deaedc96c19290932eadcc9fc6465ef22d0242905414e19c555d0b9', {
     waitUntil: 'networkidle0',
   });
  
@@ -19,10 +19,11 @@ async function extraerInformacion() {
    boleta = await page.$eval('#wrapper > div.boleta', (div) => div.textContent);
 
   //console.log(nombre, boleta);
+  
 
   await browser.close();
-
   return { nombre, boleta };
+
 }
 
 module.exports = extraerInformacion;
