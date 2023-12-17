@@ -1,0 +1,137 @@
+<!-- Código B -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Escaneo</title>
+    <style>
+        body {
+            background-color: #952f57;
+            color: #FFFFFF;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #inicioEscaneo {
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #datosGrupo {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #datosLaboratorio {
+            font-size: 18px;
+            text-align: right;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #datosProfesor {
+            background-color: #FFFFFF;
+            color: #000000;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #fecha {
+            background-color: #FFFFFF;
+            color: #000000;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        #tablaDatos {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+
+        #tablaDatos th, #tablaDatos td {
+            border: 1px solid #FFFFFF;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="inicioEscaneo">Inicio de Escaneo</div>
+
+    <div id="datosGrupo">Grupo: <span id="spanGrupo"></span></div>
+
+    <div id="datosLaboratorio">Laboratorio: <span id="spanLaboratorio"></span></div>
+
+    <div id="datosProfesor">
+        Profesor: <span id="spanProfesor"></span>
+        <br>
+        <div id="fecha"></div>
+    </div>
+
+    <table id="tablaDatos">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nombre</th>
+                <th>Boleta</th>
+                <th>N. de PC</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCuerpoDatos">
+            <!-- Aquí se llenarán dinámicamente las filas de la tabla -->
+        </tbody>
+    </table>
+
+    <script>
+        // Recuperar datos del almacenamiento local
+        const datosFormulario = JSON.parse(localStorage.getItem("datosFormulario"));
+
+        // Mostrar datos en la página
+        if (datosFormulario) {
+            document.getElementById("spanGrupo").textContent = datosFormulario.grupo;
+            document.getElementById("spanLaboratorio").textContent = datosFormulario.laboratorio;
+            document.getElementById("spanProfesor").textContent = datosFormulario.profesor;
+
+            const fechaActual = new Date();
+            const fechaString = `${fechaActual.getDate()}/${fechaActual.getMonth() + 1}/${fechaActual.getFullYear()}`;
+            document.getElementById("fecha").textContent = fechaString;
+
+            // Llenar la tabla con datos del formulario
+            const tablaCuerpoDatos = document.getElementById("tablaCuerpoDatos");
+            
+            // Modificación aquí: Llenar la tabla con datos del formulario
+            const fila = document.createElement("tr");
+            const celdaNo = document.createElement("td");
+            const celdaNombre = document.createElement("td");
+            const celdaBoleta = document.createElement("td");
+            const celdaNumPC = document.createElement("td");
+
+            // Aquí puedes obtener los valores reales desde los datos del formulario
+            celdaNo.textContent = 1;
+            celdaNombre.textContent = "Nombre";
+            celdaBoleta.textContent = "Boleta";
+            celdaNumPC.textContent = "N. de PC";
+
+            fila.appendChild(celdaNo);
+            fila.appendChild(celdaNombre);
+            fila.appendChild(celdaBoleta);
+            fila.appendChild(celdaNumPC);
+
+            tablaCuerpoDatos.appendChild(fila);
+        }
+    </script>
+</body>
+</html>

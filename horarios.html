@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Horario</title>
+  <style>
+    body {
+      background-color: #952f57;
+      color: #000000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #FFFFFF;
+      border-radius: 15px;
+      padding: 20px;
+      width: 75%;
+      box-sizing: border-box;
+    }
+
+    #horarioTable {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    #horarioTable th, #horarioTable td {
+      border: 1px solid #000000;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #horarioTable th {
+      background-color: #FFFFFF;
+    }
+
+    #horarioTable td {
+      background-color: #FFFFFF;
+    }
+
+    #titulo {
+      background-color: #FFFFFF;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+
+    #btnAceptar {
+      background-color: #ff9ec2;
+      color: #000000;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div id="titulo">
+    <h2>Seleccione el horario correspondiente:</h2>
+  </div>
+
+  <table id="horarioTable">
+    <thead>
+      <tr>
+        <th>Horarios</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>07:00 - 08:30</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>08:30 - 10:00</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>10:00 - 11:30</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>11:30 - 13:00</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>13:00 - 14:30</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>14:30 - 16:00</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>16:00 - 17:30</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>17:30 - 19:00</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>19:00 - 20:30</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+      <tr>
+        <td>20:30 - 22:00</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+        <td onclick="seleccionarHora(this)">Disponible</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div style="text-align: right;">
+  <button id="btnAceptar" onclick="irASiguienteVentana()">Aceptar</button>
+</div>
+
+<script>
+  let horarioSeleccionado = null;
+
+  function seleccionarHora(cell) {
+    if (horarioSeleccionado !== null) {
+      horarioSeleccionado.style.backgroundColor = "#FFFFFF";
+    }
+
+    cell.style.backgroundColor = "#ff9ec2";
+    horarioSeleccionado = cell;
+  }
+
+  function irASiguienteVentana() {
+    if (horarioSeleccionado !== null) {
+        // Guarda los datos seleccionados en el almacenamiento local
+        localStorage.setItem("horarioSeleccionado", JSON.stringify(horarioSeleccionado));
+        window.location.href = "segundo_codigo1.html"; // Redirige al segundo código
+    } else {
+        alert("Por favor, seleccione un horario antes de continuar.");
+            }
+  }
+</script>
+
+</body>
+</html>

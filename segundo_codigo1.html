@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Combinado</title>
+    <style>
+        body {
+            background-color: #952f57;
+            color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #codigo1, #codigo2 {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        #infoTable {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #infoTable th, #infoTable td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #infoTable th {
+            background-color: #FFFFFF;
+        }
+
+        #infoTable td {
+            background-color: #FFFFFF;
+        }
+
+        #btnAceptar {
+            background-color: #ff9ec2;
+            color: #000000;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        select, input {
+            margin-bottom: 10px;
+        }
+
+        #resultadoSection {
+            display: none;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="codigo1">
+        <table id="infoTable">
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="infoFila"></td>
+                    <td id="infoColumna"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="codigo2">
+        <form id="registroForm">
+
+            <h2><label for="laboratorio">Laboratorio:</label></h2>
+            <select id="laboratorio" name="laboratorio">
+                <option value="lab1">Laboratorio 1</option>
+                <option value="lab2">Laboratorio 2</option>
+            </select>
+
+            <h2><label for="profesor">Profesor Responsable:</label></h2>
+            <input type="text" id="profesor" name="profesor" required>
+
+            <h2><label for="grupo">Grupo:</label></h2>
+            <input type="text" id="grupo" name="grupo" required>
+
+            <h2><label for="ciclo">Ciclo Escolar:</label></h2>
+            <input type="text" id="ciclo" name="ciclo" required>
+
+            <div style="text-align: right;">
+                <!-- Modificación aquí: Llamada a la función 'guardarDatos' -->
+                <button id="btnAceptar" onclick="guardarDatos()">Aceptar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Recupera los datos seleccionados del almacenamiento local
+        const horarioSeleccionado = JSON.parse(localStorage.getItem("horarioSeleccionado"));
+
+        if (horarioSeleccionado) {
+            // Muestra la información en la tabla del segundo código
+            document.getElementById("infoFila").textContent = `Fila: ${horarioSeleccionado.fila}`;
+            document.getElementById("infoColumna").textContent = `Columna: ${horarioSeleccionado.columna}`;
+        }
+
+        function guardarDatos() {
+            const horarioSeleccionado = JSON.parse(localStorage.getItem("horarioSeleccionado"));
+
+            if (horarioSeleccionado) {
+                const profesor = document.getElementById("profesor").value;
+                const grupo = document.getElementById("grupo").value;
+                const ciclo = document.getElementById("ciclo").value;
+
+                // Verificar que todos los campos obligatorios estén completados
+                if (!profesor || !grupo || !ciclo) {
+                    alert("Todos los campos del formulario son obligatorios.");
+                    return;
+                }
+
+                // Guardar los datos en el almacenamiento local
+                localStorage.setItem("datosFormulario", JSON.stringify({ profesor, grupo, ciclo }));
+
+                // Redireccionar a Código B
+                window.location.href = "XD.html";
+            } else {
+                alert("Seleccione un horario antes de guardar los datos del formulario.");
+            }
+        }
+    </script>
+</body>
+</html>
