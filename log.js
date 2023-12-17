@@ -29,6 +29,14 @@ function PantallaRestablecerContrasena(){
   location.href = 'restablecerContraseña.html';
 }
 
+function PantallaEscanear(){
+  location.href = 'SelectordeGrupoEnFormadeHorario.html';
+}
+
+function PantallaEscaneandoGrupoyaSeleccionado(){
+  location.href = 'segundaPantalladeSelectordeGrupo.html';
+}
+
 
 function RestablecerContraseña(){
 
