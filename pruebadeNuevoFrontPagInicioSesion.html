@@ -20,10 +20,10 @@
             
             
            
-            <input type="password" placeholder="Contraseña">
-            <input type="button" value="Iniciar Sesion">
+            <input type="password" placeholder="Contraseña" required id="contrasena">
+            <input type="button" value="Iniciar Sesion" id="botonIniciar" onclick="verificarContrasena()">
             <br>
-            <p><a routerLink="/contra">¿Olvidaste tu Contraseña?</a></p>
+            <p id="BotonRestablecer" onclick="PantallaRestablecerContrasena()">¿Olvidaste tu Contraseña?</p>
         </form>
       
     </div>
