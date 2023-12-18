@@ -58,6 +58,7 @@ function ReestableciendoContrasena(){
   NuevaContrasena = document.getElementById('Nueva_Contrasena');
   NuevaContraParaEntrar = NuevaContrasena.value;
   enteredPassword = NuevaContraParaEntrar;
+  location.href = 'pruebadeNuevoFrontPagInicioSesion.html'; 
   alert(enteredPassword)
   location.href = 'index.html'; 
   
