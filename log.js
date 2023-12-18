@@ -26,7 +26,7 @@ function verificarContrasena() {
 }
 
 function PantallaRestablecerContrasena(){
-  location.href = 'restablecerContraseña.html';
+  location.href = 'PruebaNuevaRestablecerContraseña.html';
 }
 
 function PantallaEscanear(){

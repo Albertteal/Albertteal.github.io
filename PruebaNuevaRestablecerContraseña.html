@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Recuperar contraseña</title>
 	<link rel="stylesheet" href="passwordf.component.css">
+	<script src="./log.js"></script>
 </head>
 <body>
 	<section>
@@ -22,13 +23,13 @@
 			 		<h2>Recuperar contraseña</h2>
 			 		<form >
 			 			<div class="inputBox">
-			 				<input type="text" placeholder="Clave de recuperación"/>
+			 				<input type="text" placeholder="Clave de recuperación" required id="contrasena_de_restablecimiento"/>
 			 			</div>
 						 <div class="inputBox">
-							<input type="text" placeholder="Nueva contraseña"/>
+							<input type="text" placeholder="Nueva contraseña" required id="Nueva_Contrasena"/>
 						</div>
 			 			<div class="inputBox">
-			 				<input type="submit" value="Enviar" />
+			 				<input type="submit" value="Enviar" onclick="RestablecerContraseña()" />
 			 			</div>
 			 		</form>
 			 	</div>
