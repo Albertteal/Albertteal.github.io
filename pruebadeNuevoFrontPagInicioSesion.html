@@ -14,19 +14,24 @@
 </head>
 
 <body> 
+
+    <div class="contenedordePantalla">  
+        <img src="./recursos/LogoEsime.png" class="LogoEsime" /> 
+
+        <img src="./recursos/logo-ipn.png" class="LogoIPN" />
+    </div>
+
     <div class="container-form sign-in">
         <form class="formulario">
             <h2 class="create-account">Iniciar Sesion</h2>
-            
-            
-           
+
             <input type="password" placeholder="Contraseña" required id="contrasena">
             <input type="button" value="Iniciar Sesion" id="botonIniciar" onclick="verificarContrasena()">
             <br>
             <p id="BotonRestablecer" onclick="PantallaRestablecerContrasena()">¿Olvidaste tu Contraseña?</p>
         </form>
-      
     </div>
+    
     <script src="log.js"></script>
 </body>
 

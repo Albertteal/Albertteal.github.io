@@ -1,4 +1,19 @@
-
+.contenedordePantalla {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+.LogoEsime{
+    height: 300px;
+    width: 300px;
+}
+.LogoIPN{
+    height: 280px;
+    width: 300px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +26,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://scontent.fmex5-1.fna.fbcdn.net/v/t1.18169-9/20770111_1428559730564419_4209403436724524075_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=ZVRmWab8QkMAX_RV2TR&_nc_ht=scontent.fmex5-1.fna&oh=00_AfCA6M1HtLWXnydN8d4IxcZX3NeL3Bb0twAtRqZsRyL7Kw&oe=65A5FC58');
+ 
+
+    background-image: url('https://1.bp.blogspot.com/-8e0qGB7sW7I/U_-Wfs1hZ6I/AAAAAAAAAGU/oBX6YLUDcFo/s1600/DSC03978.JPG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
