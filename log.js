@@ -32,7 +32,9 @@ function PantallaRestablecerContrasena(){
 function PantallaEscanear(){
   location.href = 'SelectordeGrupoEnFormadeHorario.html';
 }
-
+function PantallaEscanearEscanearGrupo(){
+  location.href = 'SelectordeGrupoEnFormadeHorarioEscanearGrupo.html';
+}
 function PantallaEscaneandoGrupoyaSeleccionado(){
   location.href = 'segundaPantalladeSelectordeGrupo.html';
 }
