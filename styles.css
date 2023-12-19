@@ -29,21 +29,37 @@
     text-align: center;
   }
 
-#contenedordePantalla{
-    display: flex; /* Para justificarlos en el centro del eje horizontal*/
-    height: 250px;
+  #contenedordePantalla {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
+    
 }
+
+body {
+  /* height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  
+  background-image: url('https://pbs.twimg.com/media/D2hfNFgW0AEwMRa.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+} 
+
 .LogoEsime{
-margin-left: 0;
-height: 250px;
-width: 250px;
+    height: 300px;
+    width: 300px;
 }
-
 .LogoIPN{
-height: 250px;
-width: 250px;
-margin-left: 1412px ;
+    height: 280px;
+    width: 250px;
 }
 .cuerpodeLoggeo {
     height: auto;
@@ -121,9 +137,9 @@ p.TitulodeForm {
 }
 
 .button-89 {
-    --b: 3px;   /* border thickness */
-    --s: .45em; /* size of the corner */
-    --color: #6D1A42;
+    --b: 3px;  
+    --s: .45em; 
+    --color: rgb(255, 255, 255);;
     
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
     color: var(--color);
@@ -135,7 +151,7 @@ p.TitulodeForm {
     outline: var(--b) solid #0000;
     outline-offset: .6em;
     font-size: 16px;
-  
+    background-color:#6D1A42; 
     border: 0;
   
     user-select: none;
