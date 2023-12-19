@@ -38,7 +38,9 @@ function PantallaEscanearEscanearGrupo(){
 function PantallaEscaneandoGrupoyaSeleccionado(){
   location.href = 'segundaPantalladeSelectordeGrupo.html';
 }
-
+function PantallaAsistenciaGrupoYaExistente(){
+  location.href = 'vistaAsis.html' ;
+}
 
 function RestablecerContraseña(){
 
