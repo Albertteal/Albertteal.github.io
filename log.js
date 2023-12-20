@@ -36,10 +36,13 @@ function PantallaEscanearConsultaGrupo(){
   location.href = 'SelectordeGrupoEnFormadeHorarioConsultarGrupo.html';
 }
 function PantallaEscaneandoGrupoyaSeleccionado(){
-  location.href = 'segundaPantalladeSelectordeGrupo.html';
+  location.href = 'SelectordeGrupoEnFormadeHorarioEscanearGrupo.html';
 }
 function PantallaAsistenciaGrupoYaExistente(){
   location.href = 'vistaAsis.html';
+}
+function PantallaEscanearGrupo(){
+  location.href = 'PantallaEscanear.html';
 }
 
 function RestablecerContraseña(){
