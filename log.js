@@ -32,14 +32,14 @@ function PantallaRestablecerContrasena(){
 function PantallaEscanear(){
   location.href = 'SelectordeGrupoEnFormadeHorario.html';
 }
-function PantallaEscanearEscanearGrupo(){
-  location.href = 'SelectordeGrupoEnFormadeHorarioEscanearGrupo.html';
+function PantallaEscanearConsultaGrupo(){
+  location.href = 'SelectordeGrupoEnFormadeHorarioConsultarGrupo.html';
 }
 function PantallaEscaneandoGrupoyaSeleccionado(){
   location.href = 'segundaPantalladeSelectordeGrupo.html';
 }
 function PantallaAsistenciaGrupoYaExistente(){
-  location.href = 'vistaAsis.html' ;
+  location.href = 'vistaAsis.html';
 }
 
 function RestablecerContraseña(){
