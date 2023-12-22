@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer"
-
+import fs from "fs/promises";
 
 async function openWebpage(){
     const browser = await puppeteer.launch({
@@ -15,10 +15,7 @@ async function openWebpage(){
         return {boleta: boleta, nombre: nombre}
   })
     console.log(result)
-    
-    
-  
-
+    await fs.writeFile('datos.json', JSON.stringify(result))
     await browser.close();
    
     
