@@ -2,9 +2,15 @@ var enteredPassword;
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
-var boleta;
+import puppeteer from "puppeteer"
 var nombre;
-const extraerInformacion = require('./extrayendoinfo.test');
+var boleta;
+
+
+
+//const extraerInformacion = require('./extrayendoinfo.test');
+
+
 function verificarContrasena() {
 
 
@@ -28,7 +34,6 @@ function verificarContrasena() {
 function PantallaRestablecerContrasena(){
   location.href = 'PruebaNuevaRestablecerContraseña.html';
 }
-
 function PantallaEscanear(){
   location.href = 'SelectordeGrupoEnFormadeHorario.html';
 }
@@ -68,26 +73,37 @@ function ReestableciendoContrasena(){
   location.href = 'pruebadeNuevoFrontPagInicioSesion.html'; 
   alert(enteredPassword)
   location.href = 'index.html'; 
-  
-  
- 
-}
-
-async function extraer_informacion() {
-  const extraccion = await extraerInformacion();
-  boleta = extraccion.boleta;
-  nombre = extraccion.nombre;
-  console.log('La boleta desde el test: ', boleta);
-  console.log('El nombre desde el test: ', nombre);
-  SacarPantalla(boleta, nombre); // Llamar a SacarPantalla con los valores actualizados
-}
-
-function SacarPantalla(boleta, nombre) {
-  console.log('La boleta ya fuera de la funcion test es: ', boleta);
-  console.log('El nombre ya fuera de la funcion test es: ', nombre);
 }
 
 function AbrirEmergente(){
   window.open("https://javascript.info/");
 }
-extraer_informacion();
+
+
+
+
+
+
+async function openWebpage(){
+    const browser = await puppeteer.launch({
+        headless: false
+    })
+    const page = await browser.newPage()
+    await page.goto('https://servicios.dae.ipn.mx/vcred/?h=5d7213f96deaedc96c19290932eadcc9fc6465ef22d0242905414e19c555d0b9')
+    
+    
+   nombre = await page.$eval('#wrapper > div.nombre', (div) => div.textContent);
+   boleta = await page.$eval('#wrapper > div.boleta', (div) => div.textContent);
+
+  //console.log(nombre, boleta);
+  console.log('La boleta desde el test: ', boleta);
+  console.log('El nombre desde el test: ', nombre);
+    
+    await browser.close()
+
+
+    
+}
+openWebpage();
+
+
