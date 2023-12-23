@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    
 
     
 }
@@ -20,6 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: large;
 }
 
  body {
@@ -78,12 +80,13 @@
 }
 
 .formulario {
-    width: 400px;
-    height: 500px;
+    width: 442px;
+    height: 462px;
     padding: 1rem;
     margin: 2rem;
     background-color: rgba(11, 1, 37, 0.68);
     text-align: center;
+    font-size: large;
 }
 
 .create-account {
@@ -126,6 +129,7 @@
   font-size: 15px;
   border-bottom: .5px solid;
   border-bottom-color: #ffffff;
+  font-size: large;
 }
 
 .formulario input {
@@ -145,6 +149,7 @@
 
 .formulario input[type="button"] {
     width: 60%;
+    font-size: large;
     margin: auto;
     border: solid thin rgb(255, 255, 255);
     padding: .7rem;
