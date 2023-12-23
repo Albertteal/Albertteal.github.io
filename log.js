@@ -2,7 +2,6 @@ var enteredPassword;
 var contrasenaInput;
 var NuevaContraParaEntrar;
 var NuevaContrasena;
-import puppeteer from "puppeteer"
 var nombre;
 var boleta;
 
