@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de asistencia</title>
+  <script src="inciden.js" defer></script>
+  <link rel="stylesheet" href="incidenia.css">
+</head>
+<body>
+  <h1 class="titulo">Incidencias</h1>
+  <div class="grupo-profesor">
+    <h3>Grupo: {grupo}</h3>
+    <h3>Profesor: {nombre_profesor}</h3>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nombre</th>
+        <th>Boleta</th>
+        <th>#Maquina</th>
+        <th class="asistencia-principal">Asistencia</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Fecha</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Num. Lab</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>{nombre_alumno_1}</td>
+        <td>{boleta_alumno_1}</td>
+        <td>{Maquina X}</td>
+        <td><input type="checkbox" onclick="mostrarVentanaEmergente(this)"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>{nombre_alumno_2}</td>
+        <td>{boleta_alumno_2}</td>
+        <td>{Maquina X}</td>
+        <td><input type="checkbox" onclick="mostrarVentanaEmergente(this)"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>{nombre_alumno_3}</td>
+        <td>{boleta_alumno_3}</td>
+        <td>{Maquina X}</td>
+        <td><input type="checkbox" onclick="mostrarVentanaEmergente(this)"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>{nombre_alumno_4}</td>
+        <td>{boleta_alumno_4}</td>
+        <td>{Maquina X}</td>
+        <td><input type="checkbox" onclick="mostrarVentanaEmergente(this)"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>{nombre_alumno_5}</td>
+        <td>{boleta_alumno_5}</td>
+        <td>{Maquina X}</td>
+        <td><input type="checkbox" onclick="mostrarVentanaEmergente(this)"></td>
+      </tr>
+      <!-- Otras filas ... -->
+    </tbody>
+  </table>
+  <div class="botones">
+    <input type="button" value="Cancelar" class="boton" onclick="redirigir('index.html')">
+    <input type="button" value="Aceptar" class="boton" onclick="redirigir('Emergente.html')">
+  </div>
+</body>
+</html>
