@@ -12,6 +12,7 @@
   "dependencies": {
     "jest": "^29.7.0",
     "mysql": "^2.18.1",
+    "mysql2": "^3.6.5",
     "puppeteer": "^21.6.1"
   },
   "devDependencies": {
