@@ -6,7 +6,6 @@ var nombre;
 var boleta;
 
 
-
 //const extraerInformacion = require('./extrayendoinfo.test');
 
 
@@ -77,6 +76,16 @@ function ReestableciendoContrasena(){
 function AbrirEmergente(){
   window.open("https://javascript.info/");
 }
+
+
+
+
+
+
+
+
+// const meter = await pool.query("INSERT INTO alumno (boleta, nombre) VALUES ('2021350343', 'ERICK FLORES FLORES');")
+
 
 
 

@@ -7,11 +7,17 @@ const pool = mysql.createPool({
     database: 'pase_de_lista'
 }) .promise()
 
+async function consultarBoleta(){
+    const result = await pool.query("SELECT BOLETA FROM  alumno")
+    console.log(result)
+}
+consultarBoleta();
 
-const result = await pool.query("SELECT BOLETA FROM  alumno")
+
+
 // const meter = await pool.query("INSERT INTO alumno (boleta, nombre) VALUES ('2021350343', 'ERICK FLORES FLORES');")
 
-console.log(result)
+
 
 
 
