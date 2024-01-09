@@ -5,7 +5,7 @@ const database = mysql2.createConnection({
     host: 'localhost', 
     user: 'root',
     password: '7131',
-    database: 'prueba'
+    database: 'pase_de_lista'
 
 });
 
