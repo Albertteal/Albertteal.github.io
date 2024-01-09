@@ -11,6 +11,10 @@ async function consultarBoleta(){
     const result = await pool.query("SELECT BOLETA FROM  alumno")
     console.log(result)
 }
+
+
+
+
 consultarBoleta();
 
 
